@@ -8,12 +8,14 @@
 import express from 'express'
 import fs from 'fs'
 import path from 'path'
+// import process from 'process'
 
 console.log("Big red button server")
 console.log("started")
 
 const app = express()
-const port = 3000
+let port = process.env.PORT || 3000
+
 let current = 998
 const db_path = path.join(__dirname, "db.json")
 

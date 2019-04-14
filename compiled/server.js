@@ -14,6 +14,8 @@ var _path2 = _interopRequireDefault(_path);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import process from 'process'
+
 console.log("Big red button server"); /*
                                        Big red button backend server
                                        by Oran C
@@ -25,7 +27,8 @@ console.log("Big red button server"); /*
 console.log("started");
 
 var app = (0, _express2.default)();
-var port = 3000;
+var port = process.env.PORT || 3000;
+
 var current = 998;
 var db_path = _path2.default.join(__dirname, "db.json");
 
