@@ -5,12 +5,12 @@
  github.com/wisehackermonkey
  20190413
 */
-
+let hostname = window.location.href;
 $(document).ready(() => {
     function init_button_counter() {
         $.ajax({
             type: 'GET',
-            url: 'http://localhost:3000/load',
+            url: `${hostname}/load`,
             contentType: 'text/plain',
             xhrFields: {
                 withCredentials: false
@@ -33,7 +33,7 @@ $(document).ready(() => {
             type: 'GET',
 
             // The URL to make the request to.
-            url: 'http://localhost:3000/status',
+            url: `${hostname}status`,
 
             // The 'contentType' property sets the 'Content-Type' header.
             // The JQuery default for this property is
