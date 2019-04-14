@@ -16,7 +16,7 @@ console.log("started")
 const app = express()
 let port = process.env.PORT || 3000
 
-let current = 998
+let current = 0
 const db_path = path.join(__dirname, "db.json")
 
 

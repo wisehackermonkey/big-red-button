@@ -5,9 +5,14 @@
   "main": "backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./compiled/server.js",
+
     "watch": "nodemon --exec node ./compiled/server.js",
-    "build": "babel --presets es2015 -d compiled/ backend"
+
+    "clean": "rm -rf compiled && mkdir compiled",
+    "build-babel": "babel -d ./compiled ./backend -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./compiled/server.js"
+
   },
   "keywords": [
     "server",
