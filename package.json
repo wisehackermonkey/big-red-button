@@ -1,0 +1,23 @@
+{
+  "name": "big-red-button",
+  "version": "1.0.0",
+  "description": "simple backend for big red button project",
+  "main": "backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./compiled/server.js",
+    "build": "babel --presets es2015 -d compiled/ backend"
+  },
+  "keywords": [
+    "server",
+    "backend"
+  ],
+  "author": "wisemonkey <oranbusiness@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "dependencies": {
+    "requests": "^0.2.2"
+  }
+}
