@@ -14,8 +14,8 @@ console.log("started")
 
 const app = express()
 const port = 3000
-let current = 0;
-const db_path = path.join(__dirname, "db.json");
+let current = 998
+const db_path = path.join(__dirname, "db.json")
 
 
 app.use(express.static("public"))
@@ -28,7 +28,9 @@ app.options('/api/current', function (req, res) {
 });
 app.get('/status', (request, response) => {
     current += 1
-
+    if(current > 999){
+        current = 0
+    }
     // write to the file
 
     let json = JSON.stringify(current)
