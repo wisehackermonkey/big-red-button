@@ -10,7 +10,7 @@ $(document).ready(() => {
     function init_button_counter() {
         $.ajax({
             type: 'GET',
-            url: `${hostname}/load`,
+            url: `${hostname}load`,
             contentType: 'text/plain',
             xhrFields: {
                 withCredentials: false
