@@ -40,7 +40,9 @@
 }
 .footer{
     height: 100px;
-    /*align-content: flex-end ;*/
+    font-size: 0.7em;
+    font-family: 'Anton', sans-serif;
+
 }
 /*.btn-image-bg:hover{*/
     /*z-index: 100;*/
