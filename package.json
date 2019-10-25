@@ -2,14 +2,15 @@
   "name": "big-red-button",
   "version": "1.0.0",
   "description": "simple backend for big red button project",
-  "main": "backend/server.js",
+  "main": "./compiled/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon --exec node ./compiled/server.js",
     "clean": "rm -rf compiled && mkdir compiled",
-    "build-babel": "babel -d ./compiled ./backend -s",
+    "build-babel": "./node_modules/.bin/babel -d ./compiled ./backend -s && echo 'works'",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./compiled/server.js"
+    "start-build": "npm run build && node ./compiled/server.js",
+    "start": "node ./compiled/server.js"
   },
   "keywords": [
     "server",
