@@ -4,7 +4,7 @@
   "description": "simple backend for big red button project",
   "main": "./compiled/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error:  no test specified\" && exit 1",
     "watch": "nodemon --exec node ./compiled/server.js",
     "clean": "rm -rf compiled && mkdir compiled",
     "build-babel": "./node_modules/.bin/babel -d ./compiled ./backend -s && echo 'works'",
