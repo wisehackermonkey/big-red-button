@@ -16,15 +16,16 @@ Just a big red button, a one page app the uses nodejs for backend and javascript
 
 Run:
 ```
+npm install && npm run start
 
-docker run -i -p 3000:3000 -t wisehackermonkey/big-red-button-run:latest
+docker run -i -p 80:80 -t wisehackermonkey/big-red-button-run:latest
 
-Open: http://localhost:3000
+Open: http://localhost:80
 
 build from git repo
 cd  big-red-button-run
 docker build -t big-red-button-run -f Dockerfile-run ./
-docker run -i -p 80:3000 -t big-red-button-run:latest
+docker run -i -p 80:80 -t big-red-button-run:latest
 ```
 
 ### Screenshot
