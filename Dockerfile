@@ -41,9 +41,9 @@ RUN npm install -g babel-cli
 COPY . /app
 
 ENV NODE_ENV production
-ENV PORT 3000
+ENV PORT 80
 
 USER node
 
-EXPOSE 3000
+EXPOSE 80
 CMD ["npm", "run","start"]
